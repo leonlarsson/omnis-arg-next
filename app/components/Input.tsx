@@ -28,7 +28,7 @@ export default ({ route }: { route: string }) => {
   return (
     <>
       <form
-        className="mx-auto w-full min-w-max max-w-xl"
+        className="mx-auto w-full max-w-xl"
         onSubmit={async event => {
           event.currentTarget.reset();
           event.preventDefault();
