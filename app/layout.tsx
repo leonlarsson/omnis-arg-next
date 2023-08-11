@@ -16,6 +16,10 @@ const dinCondensed = localFont({
   ]
 });
 
+export const metadata = {
+  title: "The Omnis Challenge"
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="min-h-[100svh] overflow-y-scroll bg-gradient-to-bl from-neutral-950 to-neutral-900">
