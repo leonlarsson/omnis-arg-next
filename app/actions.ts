@@ -1,13 +1,20 @@
 "use server";
 
+import { kv } from "@vercel/kv";
+import { Ratelimit } from "@upstash/ratelimit";
 import { headers } from "next/headers";
 import { routes } from "./data";
 
 export const checkAnswer = async (path: string, userAnswer: string) => {
   const ip = headers().get("x-forwarded-for");
-  const allHeaders = Object.fromEntries(headers().entries());
+  const ratelimit = new Ratelimit({
+    redis: kv,
+    // rate limit to 5 requests per 10 seconds
+    limiter: Ratelimit.slidingWindow(5, "10s")
+  });
 
-  console.log({ ip, allHeaders });
+  const { success, reset } = await ratelimit.limit(`ratelimit_${ip}`);
+  if (!success) return { answerIsCorrect: false, returnHtml: `You are going too fast. Try again at ${new Date(reset).toLocaleTimeString()}.` };
 
   const route = routes.find(route => route.pathname === path);
   if (!route) return { answerIsCorrect: false, returnHtml: "Nothing here." };
