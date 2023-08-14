@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #about a {
-  @apply font-normal underline transition-colors hover:text-[#f1890d];
+  @apply font-medium underline transition-colors hover:text-[#f1890d];
 }
 
 #about hr {

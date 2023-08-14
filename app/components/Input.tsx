@@ -61,7 +61,7 @@ export default ({ route }: { route: string }) => {
         </button>
       </form>
 
-      <span className="mt-2 text-2xl font-light">
+      <span className="mt-2 text-2xl">
         {response.text}
         {response.link && (
           <>

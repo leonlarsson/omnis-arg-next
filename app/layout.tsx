@@ -9,12 +9,12 @@ const dinCondensed = localFont({
   src: [
     {
       path: "../public/fonts/DNC47.otf",
-      weight: "300",
+      weight: "400",
       style: "normal"
     },
     {
       path: "../public/fonts/DNC57.otf",
-      weight: "400",
+      weight: "500",
       style: "normal"
     }
   ]

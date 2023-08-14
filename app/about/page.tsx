@@ -7,7 +7,7 @@ export default () => {
   const [useHighContrast, setUseHighContrast] = useState(false);
 
   return (
-    <div id="about" className={`text-left text-2xl font-light transition-colors ${useHighContrast ? "text-[#e2a2a2]" : "text-bloodhunt-red"}`}>
+    <div id="about" className={`text-left text-2xl transition-colors ${useHighContrast ? "text-[#e2a2a2]" : "text-bloodhunt-red"}`}>
       <div>
         <span className="text-3xl">
           <Link href="/">The Omnis Challenge</Link> was a Bloodhunt ARG created by{" "}
@@ -56,21 +56,11 @@ export default () => {
       </span>
 
       <ul>
-        <li>
-          <b>1st:</b> Omnis statue, Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 3,000 tokens
-        </li>
-        <li>
-          <b>2nd:</b> Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 1,000 tokens
-        </li>
-        <li>
-          <b>3rd:</b> Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 500 tokens
-        </li>
-        <li>
-          <b>4th:</b> Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 300 tokens
-        </li>
-        <li>
-          <b>5th:</b> Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 300 tokens
-        </li>
+        <li>1st: Omnis statue, Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 3,000 tokens</li>
+        <li>2nd: Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 1,000 tokens</li>
+        <li>3rd: Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 500 tokens</li>
+        <li>4th: Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 300 tokens</li>
+        <li>5th: Xtrfy Bloodhunt keyboard, Gamer Advantage glasses, 300 tokens</li>
       </ul>
 
       <br />
