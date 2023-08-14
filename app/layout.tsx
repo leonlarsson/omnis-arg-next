@@ -26,8 +26,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="min-h-[100svh] overflow-y-scroll bg-gradient-to-bl from-neutral-950 to-neutral-900">
-      <body className={`${dinCondensed.className} text-white`}>
+    <html lang="en" className="min-h-[100svh] overflow-y-scroll">
+      <body className={`${dinCondensed.className} bg-cover bg-fixed bg-center bg-no-repeat text-white`} style={{ backgroundImage: "url('./images/bg.webp')" }}>
         <div className="my-3 text-center text-5xl underline transition-colors hover:text-bloodhunt-red">
           <Link href="/">The Omnis Challenge</Link>
         </div>
