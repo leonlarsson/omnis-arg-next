@@ -5,14 +5,15 @@ import { Ratelimit } from "@upstash/ratelimit";
 import { headers } from "next/headers";
 import { routes } from "./data";
 
+const ratelimit = new Ratelimit({
+  redis: kv,
+  // rate limit to 5 requests per 10 seconds
+  limiter: Ratelimit.slidingWindow(5, "10s"),
+  prefix: "omnis-arg"
+});
+
 export const checkAnswer = async (path: string, userAnswer: string) => {
   const ip = headers().get("x-forwarded-for");
-  const ratelimit = new Ratelimit({
-    redis: kv,
-    // rate limit to 5 requests per 10 seconds
-    limiter: Ratelimit.slidingWindow(5, "10s")
-  });
-
   const { success, reset } = await ratelimit.limit(`ratelimit_${ip}`);
   if (!success) return { answerIsCorrect: false, returnHtml: `You are going too fast. Try again at ${new Date(reset).toLocaleTimeString()}.` };
 
