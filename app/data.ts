@@ -20,7 +20,7 @@ export const routes: Route[] = [
   {
     stage: 2,
     pathname: "part2-d40d2703-e230-4786-a366-6f6e2828794b",
-    title: "ISam17.51",
+    title: "ISam17.51 <i class='fa-solid fa-ankh' />",
     correctAnswers: ["goliath"],
     correctResponse: `Biblical reference master! Press ${buildLink("/stages/part3-9c615232-e6d8-46a1-ad42-c03ae9fc9703")} to progress.`,
     notCorrectResponses
