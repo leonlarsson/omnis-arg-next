@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#about a {
+  @apply font-normal underline transition-colors hover:text-[#f1890d];
+}
+
+#about hr {
+  @apply my-3 rounded border-2 border-bloodhunt-red;
+}
+
+#about ul {
+  @apply list-inside list-disc pl-5 leading-9;
+}
+
+#about .correct-answer {
+  @apply cursor-copy select-all text-[#27914e] underline;
+}
+
+#about q {
+  @apply cursor-copy select-all;
+}
