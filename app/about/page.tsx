@@ -156,7 +156,7 @@ export default () => {
           The title is <q>Enter your answer with style</q>
         </li>
         <li>
-          A clue is located inside the CSS file (<b>style</b>sheet)
+          A clue is located inside the CSS file (<span className="underline">style</span>sheet)
         </li>
         <li>
           The clue is a HEX string, <q>56 4F 56 4C 4F 4C 54 4F 54 41 56 4F 56 41 20 52 4F 52 49 56 4F 56 45 52 4F 52</q>
@@ -545,17 +545,17 @@ export default () => {
         <li>The Google Form included several encrypted questions</li>
         <li>To win, you needed to decrypt the questions, answer them, and send them back encrypted</li>
         <li>
-          <b>Question 1:</b> What is the reason as to why Omnis is refered to as they? <span className="correct-answer">Omnis is not only a single individual, but also a collective combined with they/them pronouns</span>
+          <span className="font-medium">Question 1:</span> What is the reason as to why Omnis is refered to as they? <span className="correct-answer">Omnis is not only a single individual, but also a collective combined with they/them pronouns</span>
         </li>
         <li>
-          <b>Question 2:</b> What is Omnis' favorite type of food? <span className="correct-answer">Rats</span> (accepted variants in substitute: animal blood) (and if with great (other) answers: vitae/blood)
+          <span className="font-medium">Question 2:</span> What is Omnis' favorite type of food? <span className="correct-answer">Rats</span> (accepted variants in substitute: animal blood) (and if with great (other) answers: vitae/blood)
         </li>
         <li>
-          <b>Question 3:</b> Upon searching for a missing agent in Prague, Omnis sent you to Rudolfinum. Nearby the clue you could see a poster, what letters are featured on this poster? <span className="correct-answer">Parsifal</span> (variants like Parsital accepted)
+          <span className="font-medium">Question 3:</span> Upon searching for a missing agent in Prague, Omnis sent you to Rudolfinum. Nearby the clue you could see a poster, what letters are featured on this poster? <span className="correct-answer">Parsifal</span> (variants like Parsital accepted)
         </li>
         <li>
-          <b>Question 4:</b> Consider a scenario where a malicious actor has exploited a vulnerability in a web application to gain access to its backend database. They now have access to sensitive user data, including usernames, passwords, and personal information. What are some steps that can be
-          taken to mitigate the damage caused by such a breach?{" "}
+          <span className="font-medium">Question 4:</span> Consider a scenario where a malicious actor has exploited a vulnerability in a web application to gain access to its backend database. They now have access to sensitive user data, including usernames, passwords, and personal information.
+          What are some steps that can be taken to mitigate the damage caused by such a breach?{" "}
           <span className="correct-answer">
             While mitigating the damage from such an attack is quite a hassle, it involves temporarily disabling the application (and network), and shutting down the service, to then do a full investigation into how the perpetrators gained access and then resolving the issue. Then, upon going live
             making sure to immediately force all the users for that web application to update their passwords. Additionally, enforcing some kind of 2FA-solution is recommended.
