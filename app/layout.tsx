@@ -28,8 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="min-h-[100svh] overflow-y-scroll">
       <body className={`${dinCondensed.className} bg-cover bg-fixed bg-center bg-no-repeat text-white`} style={{ backgroundImage: "url('./images/bg.webp')" }}>
-        <div className="my-3 text-center text-5xl underline transition-colors hover:text-bloodhunt-red">
-          <Link href="/">The Omnis Challenge</Link>
+        <div className="my-3 text-center text-5xl">
+          <Link className="underline transition-colors hover:text-bloodhunt-red" href="/">
+            The Omnis Challenge
+          </Link>
         </div>
         <div className="container mx-auto px-4 pb-10 text-center transition-all">{children}</div>
       </body>
