@@ -1,13 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { checkAnswer } from "../actions";
+
+type Response = {
+  text: string;
+  link?: string;
+};
 
 export default ({ route }: { route: string }) => {
   const [isWorking, setIsWorking] = useState(false);
   const [answer, setAnswer] = useState("");
   const [submitButtonText, setSubmitButtonText] = useState("Submit");
-  const [response, setResponse] = useState("Awaiting input...");
+  const [response, setResponse] = useState<Response>({ text: "Awaiting input...", link: undefined });
 
   const handleCooldown = () => {
     let secondsLeft = 4;
@@ -34,7 +40,7 @@ export default ({ route }: { route: string }) => {
           event.preventDefault();
           setIsWorking(true);
           const returnData = await checkAnswer(route, answer);
-          setResponse(returnData.returnHtml);
+          setResponse(returnData);
           handleCooldown();
         }}
       >
@@ -55,7 +61,19 @@ export default ({ route }: { route: string }) => {
         </button>
       </form>
 
-      <span className="mt-2 text-2xl font-light" dangerouslySetInnerHTML={{ __html: response }}></span>
+      <span className="mt-2 text-2xl font-light">
+        {response.text}
+        {response.link && (
+          <>
+            {" "}
+            Press{" "}
+            <Link className="underline transition-colors hover:text-bloodhunt-red" href={response.link}>
+              here
+            </Link>{" "}
+            to progress.
+          </>
+        )}
+      </span>
     </>
   );
 };
