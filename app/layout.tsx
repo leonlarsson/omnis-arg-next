@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import "/public/fontawesome/css/fontawesome.min.css";
+import "/public/fontawesome/css/solid.min.css";
+import "/public/fontawesome/css/brands.min.css";
 
 const dinCondensed = localFont({
   src: [
