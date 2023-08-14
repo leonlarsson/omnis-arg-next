@@ -1,5 +1,7 @@
 const notCorrectResponses = ["Not correct.", "Nope.", "Try again.", "Better luck next time."];
 
+const buildLink = (url: string, text?: string) => `<a class="underline hover:text-bloodhunt-red transition-colors" href="${url}">${text ?? "here"}</a>`;
+
 export const routes: Route[] = [
   {
     stage: 1,
@@ -12,7 +14,7 @@ export const routes: Route[] = [
       }
     ],
     correctAnswers: ["vltava river"],
-    correctResponse: "Task completed. Press <a class='underline hover:text-bloodhunt-red transition-colors' href='/stages/part2-d40d2703-e230-4786-a366-6f6e2828794b'>here</a> to progress.",
+    correctResponse: `Task completed. Press ${buildLink("/stages/part2-d40d2703-e230-4786-a366-6f6e2828794b")} to progress.`,
     notCorrectResponses
   },
   {
@@ -20,7 +22,7 @@ export const routes: Route[] = [
     pathname: "part2-d40d2703-e230-4786-a366-6f6e2828794b",
     title: "ISam17.51",
     correctAnswers: ["goliath"],
-    correctResponse: "Biblical reference master! Press <a class='underline hover:text-bloodhunt-red transition-colors' href='/stages/part3-9c615232-e6d8-46a1-ad42-c03ae9fc9703'>here</a> to progress.",
+    correctResponse: `Biblical reference master! Press ${buildLink("/stages/part3-9c615232-e6d8-46a1-ad42-c03ae9fc9703")} to progress.`,
     notCorrectResponses
   },
   {
@@ -28,7 +30,7 @@ export const routes: Route[] = [
     pathname: "part3-9c615232-e6d8-46a1-ad42-c03ae9fc9703",
     title: "§1 Omnis Chambers",
     correctAnswers: ["my name is edvin and i have been living in the massive bunker under prague for the last 5 years."],
-    correctResponse: "I'm impressed. Press <a class='underline hover:text-bloodhunt-red transition-colors' href='/stages/part4-61be5a2e-b8d0-47bf-8c92-f6b14f9f2ae7'>here</a> to progress.",
+    correctResponse: `I'm impressed. Press ${buildLink("/stages/part4-61be5a2e-b8d0-47bf-8c92-f6b14f9f2ae7")} to progress.`,
     notCorrectResponses
   },
   {
@@ -37,7 +39,7 @@ export const routes: Route[] = [
     title:
       "In sooth, what be I that speak sans mouth,<br/>and hear sans ears, in ways uncouth?<br/>Of flesh or form, I have no sight,<br/>Yet wind's sweet kiss brings me to light.<br/><br/>What creature am I, one might ask,<br/>Whose form eludes the mortal task?<br/>Nay, I be none, save for the breeze,<br/>That rouses me from my great peace.",
     correctAnswers: ["an echo", "echo"],
-    correctResponse: "An echo indeed. Press <a class='underline hover:text-bloodhunt-red transition-colors' href='/stages/part5-8eb95950-e1f2-43b1-86f7-5bdbacfbbaaf'>here</a> to progress.",
+    correctResponse: `An echo indeed. Press ${buildLink("/stages/part5-8eb95950-e1f2-43b1-86f7-5bdbacfbbaaf")} to progress.`,
     notCorrectResponses
   },
   {
@@ -47,7 +49,7 @@ export const routes: Route[] = [
     documentTitle: "sTiDOpnADnmSegoHuHhlSacAnHLdSSsAhDDsAraSetHhsytHooSunADaLAHSS",
     correctAnswers: ["abfsrengh (1922)", "abfsrengh zbivr (1922)", "abfsrengh 1922", "abfsrengh zbivr 1922", "abfsrengh - 1922", "1922 abfsrengh", "(1922) abfsrengh", "abfsrengh gur zbivr", "gur zbivr abfsrengh"],
     // "nosferatu (1922)", "nosferatu movie (1922)", "nosferatu 1922", "nosferatu movie 1922", "nosferatu - 1922", "1922 nosferatu", "(1922) nosferatu", "nosferatu the movie", "the movie nosferatu"
-    correctResponse: "Of course. Press <a class='underline hover:text-bloodhunt-red transition-colors' href='/stages/part6-cabbe8cf-cb8f-4301-9b97-9f007ac9f326'>here</a> to progress.",
+    correctResponse: `Of course. Press ${buildLink("/stages/part6-cabbe8cf-cb8f-4301-9b97-9f007ac9f326")} to progress.`,
     notCorrectResponses
   },
   {
@@ -55,7 +57,7 @@ export const routes: Route[] = [
     pathname: "part6-cabbe8cf-cb8f-4301-9b97-9f007ac9f326",
     title: "Search. Listen. Report<br/>🔑 Bring back an encrypted message 🔑",
     correctAnswers: ["vbe ccflt vmk dramyxs"],
-    correctResponse: "Correct! Press <a class='underline hover:text-bloodhunt-red transition-colors' href='/stages/part7-07c84e24-8e47-445e-a8f5-aead7bbf3e22'>here</a> to progress.",
+    correctResponse: `Correct! Press ${buildLink("/stages/part7-07c84e24-8e47-445e-a8f5-aead7bbf3e22")} to progress.`,
     notCorrectResponses
   },
   {
@@ -63,7 +65,7 @@ export const routes: Route[] = [
     pathname: "part7-07c84e24-8e47-445e-a8f5-aead7bbf3e22",
     title: "Gallow's Hill I. Who commanded the forces?",
     correctAnswers: ["hans christoff von königsmarck", "hans christoph von königsmarck", "hans christoff königsmarck"],
-    correctResponse: "True historian! Press <a class='underline hover:text-bloodhunt-red transition-colors' href='/stages/part8-87dee686-1a6f-413a-8d35-ffc3966af79a'>here</a> to progress.",
+    correctResponse: `True historian! Press ${buildLink("/stages/part8-87dee686-1a6f-413a-8d35-ffc3966af79a")} to progress.`,
     notCorrectResponses: ["Nope.", "Try again.", "Never heard of this person."]
   },
   {
@@ -72,7 +74,7 @@ export const routes: Route[] = [
     title: "/stash/znrtsgburmvhgivvgrmkiztfv.png",
     correctAnswers: ["jraprfynf xevm", "jraprfynf xříž"],
     // "wenceslas kriz", "wenceslas kříž"
-    correctResponse: "Obviously... Press <a class='underline hover:text-bloodhunt-red transition-colors' href='/stages/part9-5576535d-d238-4f17-8f8f-84fa6d2637a6'>here</a> to progress.",
+    correctResponse: `Obviously... Press ${buildLink("/stages/part9-5576535d-d238-4f17-8f8f-84fa6d2637a6")} to progress.`,
     notCorrectResponses
   },
   {
@@ -80,7 +82,7 @@ export const routes: Route[] = [
     pathname: "part9-5576535d-d238-4f17-8f8f-84fa6d2637a6",
     title: "Nikdy nezapomeň na svou minulost.",
     correctAnswers: ["hořící kostel", "horici kostel"],
-    correctResponse: "You're on fire! Press <a class='underline hover:text-bloodhunt-red transition-colors' href='/stages/part10-0d630934-40e1-4e03-a64d-a8fd05a4bd4d'>here</a> to progress.",
+    correctResponse: `You're on fire! Press ${buildLink("/stages/part10-0d630934-40e1-4e03-a64d-a8fd05a4bd4d")} to progress.`,
     notCorrectResponses
   },
   {
