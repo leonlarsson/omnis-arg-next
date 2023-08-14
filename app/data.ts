@@ -7,12 +7,6 @@ export const routes: Route[] = [
     stage: 1,
     pathname: "part1-62cc0e08-a230-43e0-a7d2-4d1fd14af939",
     title: "Enter your answer with style",
-    clues: [
-      {
-        answer: "clue",
-        response: "clue response"
-      }
-    ],
     correctAnswers: ["vltava river"],
     correctResponse: `Task completed. Press ${buildLink("/stages/part2-d40d2703-e230-4786-a366-6f6e2828794b")} to progress.`,
     notCorrectResponses
@@ -21,6 +15,12 @@ export const routes: Route[] = [
     stage: 2,
     pathname: "part2-d40d2703-e230-4786-a366-6f6e2828794b",
     title: "ISam17.51 <i class='fa-solid fa-ankh' />",
+    clues: [
+      {
+        answer: "shielded by faith",
+        response: "Philistine is something else."
+      }
+    ],
     correctAnswers: ["goliath"],
     correctResponse: `Biblical reference master! Press ${buildLink("/stages/part3-9c615232-e6d8-46a1-ad42-c03ae9fc9703")} to progress.`,
     notCorrectResponses
