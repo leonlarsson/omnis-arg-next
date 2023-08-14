@@ -24,7 +24,7 @@ export default () => {
           </a>
         </span>
         <br />
-        <button className="my-2 bg-bloodhunt-red p-2 text-white" onClick={() => setUseHighContrast(!useHighContrast)}>
+        <button className="my-2 bg-bloodhunt-red/70 p-2 text-white transition-colors hover:bg-bloodhunt-red" onClick={() => setUseHighContrast(!useHighContrast)}>
           {useHighContrast ? "Disable" : "Enable"} high contrast
         </button>
       </div>
