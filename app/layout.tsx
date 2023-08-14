@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="min-h-[100svh] overflow-y-scroll bg-gradient-to-bl from-neutral-950 to-neutral-900">
       <body className={`${dinCondensed.className} text-white`}>
-        <div className="mt-3 text-center text-5xl">The Omnis Challenge</div>
+        <div className="my-3 text-center text-5xl">The Omnis Challenge</div>
         <div className="container mx-auto px-4 pb-10 text-center transition-all">{children}</div>
       </body>
     </html>
