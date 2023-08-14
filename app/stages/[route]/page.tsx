@@ -15,7 +15,7 @@ export default ({ params }: { params: { route: string } }) => {
 
   return (
     <div className="flex flex-col gap-1">
-      <Title content={route.title} />
+      <Title title={route.title} titleIsHtml={route.titleIsHtml} titleEmote={route.titleEmote} />
       <Input route={route.pathname} />
     </div>
   );

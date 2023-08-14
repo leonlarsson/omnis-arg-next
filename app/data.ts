@@ -17,7 +17,8 @@ export const routes: Route[] = [
   {
     stage: 2,
     pathname: "part2-d40d2703-e230-4786-a366-6f6e2828794b",
-    title: "ISam17.51 <i class='fa-solid fa-ankh' />",
+    title: "ISam17.51",
+    titleEmote: "fa-solid fa-ankh",
     clues: [
       {
         answer: "shielded by faith",
@@ -46,7 +47,7 @@ export const routes: Route[] = [
     stage: 4,
     pathname: "part4-61be5a2e-b8d0-47bf-8c92-f6b14f9f2ae7",
     title:
-      "In sooth, what be I that speak sans mouth,<br/>and hear sans ears, in ways uncouth?<br/>Of flesh or form, I have no sight,<br/>Yet wind's sweet kiss brings me to light.<br/><br/>What creature am I, one might ask,<br/>Whose form eludes the mortal task?<br/>Nay, I be none, save for the breeze,<br/>That rouses me from my great peace.",
+      "In sooth, what be I that speak sans mouth,\nand hear sans ears, in ways uncouth?\nOf flesh or form, I have no sight,\nYet wind's sweet kiss brings me to light.\n\nWhat creature am I, one might ask,\nWhose form eludes the mortal task?\nNay, I be none, save for the breeze,\nThat rouses me from my great peace.",
     correctAnswers: ["an echo", "echo"],
     correctResponse: {
       text: "An echo indeed.",
@@ -57,7 +58,7 @@ export const routes: Route[] = [
   {
     stage: 5,
     pathname: "part5-8eb95950-e1f2-43b1-86f7-5bdbacfbbaaf",
-    title: "Sky. Chambers. RF<br/>Secrecy needed. ROT13 answer wanted.",
+    title: "Sky. Chambers. RF\nSecrecy needed. ROT13 answer wanted.",
     documentTitle: "sTiDOpnADnmSegoHuHhlSacAnHLdSSsAhDDsAraSetHhsytHooSunADaLAHSS",
     correctAnswers: ["abfsrengh (1922)", "abfsrengh zbivr (1922)", "abfsrengh 1922", "abfsrengh zbivr 1922", "abfsrengh - 1922", "1922 abfsrengh", "(1922) abfsrengh", "abfsrengh gur zbivr", "gur zbivr abfsrengh"],
     // "nosferatu (1922)", "nosferatu movie (1922)", "nosferatu 1922", "nosferatu movie 1922", "nosferatu - 1922", "1922 nosferatu", "(1922) nosferatu", "nosferatu the movie", "the movie nosferatu"
@@ -70,7 +71,7 @@ export const routes: Route[] = [
   {
     stage: 6,
     pathname: "part6-cabbe8cf-cb8f-4301-9b97-9f007ac9f326",
-    title: "Search. Listen. Report<br/>🔑 Bring back an encrypted message 🔑",
+    title: "Search. Listen. Report\n🔑 Bring back an encrypted message 🔑",
     correctAnswers: ["vbe ccflt vmk dramyxs"],
     correctResponse: {
       text: "Correct!",
@@ -116,6 +117,7 @@ export const routes: Route[] = [
     stage: 10,
     pathname: "part10-0d630934-40e1-4e03-a64d-a8fd05a4bd4d",
     title: "<u><b><s>F</s></b>inal <b><s>H</s></b></u>urdle 100BC<br />mnlygwa gvby hnjm dpah 'tjuov'",
+    titleIsHtml: true,
     correctAnswers: ["wnahf"],
     // "janus" ROT13
     correctResponse: {
@@ -129,6 +131,8 @@ export type Route = {
   stage: number;
   pathname: string;
   title: string;
+  titleIsHtml?: boolean;
+  titleEmote?: string;
   documentTitle?: string;
   clues?: { answer: string; response: string }[];
   correctAnswers: string[];
